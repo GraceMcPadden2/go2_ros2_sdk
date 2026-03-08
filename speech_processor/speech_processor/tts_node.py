@@ -258,7 +258,7 @@ class EnhancedTTSNode(Node):
         self._setup_communication()
         
         # RTC topic constants (imported from domain)
-        self.RTC_TOPIC = {"AUDIO_HUB_REQ": 1003}  # Fallback if import fails
+        self.RTC_TOPIC = {"AUDIO_HUB_REQ": "rt/api/audiohub/request"}  # Fallback if import fails
         
         # Log initialization
         self._log_initialization()
