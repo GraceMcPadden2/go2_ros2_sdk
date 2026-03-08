@@ -55,13 +55,13 @@ class AudioFilePublisher(Node):
         total_chunks = len(raw_chunks)
 
         self.get_logger().info(f"Sending {total_chunks} chunks, duration {duration_s:.2f}s")
-        time.sleep(0.1)
+        time.sleep(0.3)
         self.send_req(API_ID_END, "")
         self.get_logger().info("Done")
-        time.sleep(0.1)
+        time.sleep(0.3)
         # Send start (empty parameter)
         self.send_req(API_ID_START, "")
-        time.sleep(0.1)
+        time.sleep(0.3)
 
         # Send chunks with correct keys, 1-based index
         for i, chunk in enumerate(raw_chunks):
