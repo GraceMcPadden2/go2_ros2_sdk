@@ -1,0 +1,5 @@
+services:
+  unitree_ros:
+    network_mode: bridge
+    ports:
+      - "8765:8765"
